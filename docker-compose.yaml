@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    environment:
+      - "POSTGRES_PASSWORD=mypassword"
+    ports:
+      - 5432:5432
+
+  flyway-migrations:
+    image: ${REGISTRY:-local}/flyway-migrations:${TAG:-latest}
+    build:
+      context: ./migrations
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      - "FLYWAY_URL=jdbc:postgresql://db/"
+      - "FLYWAY_SCHEMAS=todo"
+      - "FLYWAY_DEFAULT_SCHEMA=todo"
+      - "FLYWAY_USER=postgres"
+      - "FLYWAY_PASSWORD=mypassword"
+      - "FLYWAY_CONNECT_RETRIES=60"
+
+  todo-suave:
+    image: ${REGISTRY:-local}/todo.suave:${TAG:-latest}
+    build:
+      context: ./src/todo-suave
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      - "DATABASE_URL=postgres://postgres:mypassword@db:5432/postgres?pool_max_conns=10"
+      - "HOST=http://todo:8080"

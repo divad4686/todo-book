@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "6zNZ+s6N2TYsT5XWo8+iOCIaSPRajhlOwpdLEK6vu5yX8wfrJI2Ix7w7tX5Zs8rEQL0VmlBsgBVxOOJJQ84p2w==",
+  "success": true,
+  "projectFilePath": "/mnt/c/Users/divad/programacion/todo-book/src/todo-suave/todo-suave.fsproj",
+  "expectedPackageFiles": [
+    "/home/divad4686/.nuget/packages/dapper/2.0.78/dapper.2.0.78.nupkg.sha512",
+    "/home/divad4686/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/home/divad4686/.nuget/packages/npgsql/5.0.1.1/npgsql.5.0.1.1.nupkg.sha512",
+    "/home/divad4686/.nuget/packages/suave/2.6.0/suave.2.6.0.nupkg.sha512",
+    "/home/divad4686/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
