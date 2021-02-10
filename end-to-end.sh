@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 # host="http://cicdexample.com/staging/todoapi"
-host="localhost:8080"
+host="localhost:5000"
 
 curl $host/hello
 
@@ -19,6 +19,3 @@ curl $host/todo \
     }"
 
 echo " "
-curl $host/todo \
-  -H  "accept: application/json" \
-  -H  "Content-Type: application/json"

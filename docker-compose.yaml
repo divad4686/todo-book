@@ -22,13 +22,13 @@ services:
       - "FLYWAY_PASSWORD=mypassword"
       - "FLYWAY_CONNECT_RETRIES=60"
 
-  todo-suave:
-    image: ${REGISTRY:-local}/todo.suave:${TAG:-latest}
+  todo-giraffe:
+    image: ${REGISTRY:-local}/todo.giraffe:${TAG:-latest}
     build:
-      context: ./src/todo-suave
+      context: ./src/todo-giraffe
       dockerfile: Dockerfile
     ports:
-      - 8080:8080
+      - 8081:5000
     environment:
       - "DATABASE_URL=postgres://postgres:mypassword@db:5432/postgres?pool_max_conns=10"
       - "HOST=http://todo:8080"
