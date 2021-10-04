@@ -9,7 +9,7 @@
   <ItemGroup>    
     <PackageReference Include="App.Metrics.AspNetCore.All" Version="4.1.0" />
     <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.1.0" />
-    <PackageReference Include="FsToolkit.ErrorHandling" Version="2.0.0" />
+    <PackageReference Include="FsToolkit.ErrorHandling" Version="2.7.0" />
     <PackageReference Include="Giraffe" Version="5.0.0-rc-6" />
     <PackageReference Include="Ply" Version="0.3.*" />
     <PackageReference Include="Npgsql" Version="5.0.1.1" />

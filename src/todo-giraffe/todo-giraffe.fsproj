@@ -21,8 +21,8 @@
     <Compile Include="Errors.fs" />
     <Compile Include="BaseTypes.fs" />
     <Compile Include="WebApp.fs" />
-    <Compile Include="Program.fs" />
     <Compile Include="Domain.fs" />
+    <Compile Include="Program.fs" />
   </ItemGroup>
 
 </Project>

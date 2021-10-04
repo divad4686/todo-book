@@ -8,15 +8,21 @@ open Microsoft.AspNetCore.Hosting
 open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
 open Microsoft.Extensions.DependencyInjection
+open System.Linq
 open Giraffe
 open Serilog
+open App.Metrics.AspNetCore
+open App.Metrics
+open App.Metrics.Formatters.Prometheus
+open GroupUp.WebApp
+
 
 
 // ---------------------------------
 // Error handler
 // ---------------------------------
 
-let errorHandler (ex: Exception) (logger: ILogger) =
+let errorHandler (ex: Exception) (logger: Microsoft.Extensions.Logging.ILogger) =
     logger.LogError(ex, "An unhandled exception has occurred while executing the request.")
 
     clearResponse
@@ -34,7 +40,7 @@ let configureCors (builder: CorsPolicyBuilder) =
         .AllowAnyHeader()
     |> ignore
 
-let configureApp (app: IApplicationBuilder) =
+let configureApp webApp (app: IApplicationBuilder) =
     let env =
         app.ApplicationServices.GetService<IWebHostEnvironment>()
 
@@ -42,8 +48,7 @@ let configureApp (app: IApplicationBuilder) =
      | true -> app.UseDeveloperExceptionPage()
      | false ->
          app
-             .UseGiraffeErrorHandler(errorHandler)
-             .UseHttpsRedirection())
+             .UseGiraffeErrorHandler(errorHandler))
         .UseCors(configureCors)
         .UseStaticFiles()
         .UseGiraffe(webApp)
@@ -81,7 +86,7 @@ let main args =
             .OutputMetrics.AsPrometheusPlainText()
             .OutputMetrics.AsPrometheusProtobuf()
             .Build()
-
+    
     let configPrometheus (options: MetricsWebHostOptions) =
         options.EndpointOptions <-
             fun endOptions ->
