@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zkk24OL+6cdhv/wbeDo+EcB4uxMvlYr8TmTyUMpMBJBY1dIMlfhGL/g/drqVikN8l7ZLJhgmcwxkiLCIEE4Ncw==",
+  "dgSpecHash": "4yY+B+4mEgEsZeWlU3wpV1B9riTKKAmxbtJZYFg5ULzHZGl8luqiS05c8m/GbRXbXtN/vAd/2Ang+gcb8yV38w==",
   "success": true,
-  "projectFilePath": "/mnt/c/Users/divad/programacion/todo-book/src/meetup-giraffe/meetup-giraffe.fsproj",
+  "projectFilePath": "/home/divad4686/todo-book/src/groupup-giraffe/meetup-giraffe.fsproj",
   "expectedPackageFiles": [
     "/home/divad4686/.nuget/packages/app.metrics/4.1.0/app.metrics.4.1.0.nupkg.sha512",
     "/home/divad4686/.nuget/packages/app.metrics.abstractions/4.1.0/app.metrics.abstractions.4.1.0.nupkg.sha512",
@@ -26,7 +26,7 @@
     "/home/divad4686/.nuget/packages/app.metrics.formatters.json/4.1.0/app.metrics.formatters.json.4.1.0.nupkg.sha512",
     "/home/divad4686/.nuget/packages/app.metrics.formatters.prometheus/4.1.0/app.metrics.formatters.prometheus.4.1.0.nupkg.sha512",
     "/home/divad4686/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
-    "/home/divad4686/.nuget/packages/fstoolkit.errorhandling/2.0.0/fstoolkit.errorhandling.2.0.0.nupkg.sha512",
+    "/home/divad4686/.nuget/packages/fstoolkit.errorhandling/2.7.0/fstoolkit.errorhandling.2.7.0.nupkg.sha512",
     "/home/divad4686/.nuget/packages/giraffe/5.0.0-rc-6/giraffe.5.0.0-rc-6.nupkg.sha512",
     "/home/divad4686/.nuget/packages/giraffe.viewengine/1.3.0/giraffe.viewengine.1.3.0.nupkg.sha512",
     "/home/divad4686/.nuget/packages/microsoft.bcl.asyncinterfaces/1.0.0/microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",

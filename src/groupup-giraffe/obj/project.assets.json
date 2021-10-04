@@ -354,7 +354,7 @@
           }
         }
       },
-      "FsToolkit.ErrorHandling/2.0.0": {
+      "FsToolkit.ErrorHandling/2.7.0": {
         "type": "package",
         "dependencies": {
           "FSharp.Core": "4.6.2"
@@ -2503,13 +2503,14 @@
         "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll"
       ]
     },
-    "FsToolkit.ErrorHandling/2.0.0": {
-      "sha512": "Hx9J60G8brfXvPSDryP+tBeaNpmDvgTBtapEzl4PDj23NVM39j7kUWd794wzDDlxcT8aZG4dUHpKwfo4KR9UoA==",
+    "FsToolkit.ErrorHandling/2.7.0": {
+      "sha512": "yBVzxU+wCcrHGj0Ip0IPgVZvG7+PfE+wG0AN2nWoAvh11N8NSzd2bU6BKKhzqMxI8dVbkwSdyy9PFN5TGWIvqg==",
       "type": "package",
-      "path": "fstoolkit.errorhandling/2.0.0",
+      "path": "fstoolkit.errorhandling/2.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "License",
         "fable/AssemblyInfo.fs",
         "fable/Async.fs",
         "fable/AsyncOption.fs",
@@ -2537,7 +2538,7 @@
         "fable/obj/Debug/netstandard2.0/FsToolkit.ErrorHandling.AssemblyInfo.fs",
         "fable/obj/Release/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.fs",
         "fable/obj/Release/netstandard2.0/FsToolkit.ErrorHandling.AssemblyInfo.fs",
-        "fstoolkit.errorhandling.2.0.0.nupkg.sha512",
+        "fstoolkit.errorhandling.2.7.0.nupkg.sha512",
         "fstoolkit.errorhandling.nuspec",
         "lib/netstandard2.0/FsToolkit.ErrorHandling.dll",
         "lib/netstandard2.0/FsToolkit.ErrorHandling.pdb",
@@ -6820,7 +6821,7 @@
       "App.Metrics.AspNetCore.All >= 4.1.0",
       "App.Metrics.Formatters.Prometheus >= 4.1.0",
       "FSharp.Core >= 5.0.0",
-      "FsToolkit.ErrorHandling >= 2.0.0",
+      "FsToolkit.ErrorHandling >= 2.7.0",
       "Giraffe >= 5.0.0-rc-6",
       "Npgsql >= 5.0.1.1",
       "Ply >= 0.3.*",
@@ -6835,11 +6836,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/divad/programacion/todo-book/src/meetup-giraffe/meetup-giraffe.fsproj",
+      "projectUniqueName": "/home/divad4686/todo-book/src/groupup-giraffe/meetup-giraffe.fsproj",
       "projectName": "meetup-giraffe.App",
-      "projectPath": "/mnt/c/Users/divad/programacion/todo-book/src/meetup-giraffe/meetup-giraffe.fsproj",
+      "projectPath": "/home/divad4686/todo-book/src/groupup-giraffe/meetup-giraffe.fsproj",
       "packagesPath": "/home/divad4686/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/divad/programacion/todo-book/src/meetup-giraffe/obj/",
+      "outputPath": "/home/divad4686/todo-book/src/groupup-giraffe/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/divad4686/.nuget/NuGet/NuGet.Config"
@@ -6878,7 +6879,7 @@
           },
           "FsToolkit.ErrorHandling": {
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "[2.7.0, )",
             "generatePathProperty": true
           },
           "Giraffe": {
@@ -6930,7 +6931,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -7,10 +7,10 @@
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/divad4686/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/divad4686/.nuget/packages/</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.8.0</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.9.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageFolders)))" />
+    <SourceRoot Include="/home/divad4686/.nuget/packages/" />
   </ItemGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
@@ -23,7 +23,7 @@
     <PkgPly Condition=" '$(PkgPly)' == '' ">/home/divad4686/.nuget/packages/ply/0.3.1</PkgPly>
     <PkgNpgsql Condition=" '$(PkgNpgsql)' == '' ">/home/divad4686/.nuget/packages/npgsql/5.0.1.1</PkgNpgsql>
     <PkgGiraffe Condition=" '$(PkgGiraffe)' == '' ">/home/divad4686/.nuget/packages/giraffe/5.0.0-rc-6</PkgGiraffe>
-    <PkgFsToolkit_ErrorHandling Condition=" '$(PkgFsToolkit_ErrorHandling)' == '' ">/home/divad4686/.nuget/packages/fstoolkit.errorhandling/2.0.0</PkgFsToolkit_ErrorHandling>
+    <PkgFsToolkit_ErrorHandling Condition=" '$(PkgFsToolkit_ErrorHandling)' == '' ">/home/divad4686/.nuget/packages/fstoolkit.errorhandling/2.7.0</PkgFsToolkit_ErrorHandling>
     <PkgApp_Metrics_Formatters_Prometheus Condition=" '$(PkgApp_Metrics_Formatters_Prometheus)' == '' ">/home/divad4686/.nuget/packages/app.metrics.formatters.prometheus/4.1.0</PkgApp_Metrics_Formatters_Prometheus>
     <PkgApp_Metrics_AspNetCore_All Condition=" '$(PkgApp_Metrics_AspNetCore_All)' == '' ">/home/divad4686/.nuget/packages/app.metrics.aspnetcore.all/4.1.0</PkgApp_Metrics_AspNetCore_All>
   </PropertyGroup>

@@ -1,4 +1,4 @@
-﻿module TodoGiraffe.WebApp
+﻿module GroupUp.WebApp
 open Microsoft.AspNetCore.Http
 open Giraffe
 
@@ -9,5 +9,5 @@ let setMetricsRoute: HttpHandler =
         next ctx
 let webApp db =
     setMetricsRoute
-    >=> choose [ route "/" >=> text "Hello"
+    >=> choose [ route "/" >=> text "Hello World"
                  setStatusCode 404 >=> text "Not Found" ]

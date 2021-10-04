@@ -80,7 +80,7 @@ let main args =
             .OutputMetrics.AsPrometheusPlainText()
             .OutputMetrics.AsPrometheusProtobuf()
             .Build()
-
+    
     let configPrometheus (options: MetricsWebHostOptions) =
         options.EndpointOptions <-
             fun endOptions ->
