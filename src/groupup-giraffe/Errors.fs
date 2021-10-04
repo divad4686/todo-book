@@ -1,4 +1,3 @@
-﻿module TodoGiraffe.Errors
+﻿module GroupUp.Errors
 
-type Error =
-    | CannotCreateBaseType of string
+type Error = CannotCreateBaseType of string

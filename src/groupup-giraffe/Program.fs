@@ -1,4 +1,4 @@
-module MeetupGiraffe.App
+module GroupUp.App
 
 open System
 open System.IO
@@ -46,9 +46,7 @@ let configureApp webApp (app: IApplicationBuilder) =
 
     (match env.IsDevelopment() with
      | true -> app.UseDeveloperExceptionPage()
-     | false ->
-         app
-             .UseGiraffeErrorHandler(errorHandler))
+     | false -> app.UseGiraffeErrorHandler(errorHandler))
         .UseCors(configureCors)
         .UseStaticFiles()
         .UseGiraffe(webApp)
@@ -86,7 +84,7 @@ let main args =
             .OutputMetrics.AsPrometheusPlainText()
             .OutputMetrics.AsPrometheusProtobuf()
             .Build()
-    
+
     let configPrometheus (options: MetricsWebHostOptions) =
         options.EndpointOptions <-
             fun endOptions ->

@@ -1,4 +1,4 @@
-﻿module TodoGiraffe.BaseTypes
+﻿module GroupUp.BaseTypes
 
 open System
 open TodoGiraffe.Errors
@@ -8,12 +8,16 @@ type EmailAddress = private EmailAddress of string
 type PostalCode = private PostalCode of string
 
 module Guid =
-    let ParseResult (guid:string) =
-        let result,id = Guid.TryParse(guid)
+    let ParseResult (guid: string) =
+        let result, id = Guid.TryParse(guid)
+
         match result with
-            | true -> id |> Ok
-            | false -> "Could not parse GUID" |> CannotCreateBaseType |> Error        
-        
+        | true -> id |> Ok
+        | false ->
+            "Could not parse GUID"
+            |> CannotCreateBaseType
+            |> Error
+
 
 module ConstrainedType =
     let createString fieldName ctor maxLen str =
