@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>meetup-giraffe.App</AssemblyName>
+    <AssemblyName>groupup-giraffe</AssemblyName>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
 
-  <ItemGroup>    
+  <ItemGroup>
     <PackageReference Include="App.Metrics.AspNetCore.All" Version="4.1.0" />
     <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.1.0" />
     <PackageReference Include="FsToolkit.ErrorHandling" Version="2.7.0" />
@@ -21,7 +21,8 @@
   <ItemGroup>
     <Compile Include="Errors.fs" />
     <Compile Include="BaseTypes.fs" />
+    <Compile Include="Domain.fs" />
     <Compile Include="WebApp.fs" />
-    <Compile Include="Program.fs" />    
+    <Compile Include="Program.fs" />
   </ItemGroup>
 </Project>

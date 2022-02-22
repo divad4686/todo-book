@@ -1,7 +1,7 @@
 ﻿module GroupUp.BaseTypes
 
 open System
-open TodoGiraffe.Errors
+open GroupUp.Errors
 
 type String50 = private String50 of string
 type EmailAddress = private EmailAddress of string
@@ -10,7 +10,7 @@ type PostalCode = private PostalCode of string
 module Guid =
     let ParseResult (guid: string) =
         let result, id = Guid.TryParse(guid)
-
+    
         match result with
         | true -> id |> Ok
         | false ->

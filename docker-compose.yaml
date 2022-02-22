@@ -1,5 +1,15 @@
 version: "3.8"
 services:
+  groupup-giraffe:
+    image: ${REGISTRY:-local}/todo.giraffe:${TAG:-latest}
+    build:
+      context: ./src/groupup-giraffe
+      dockerfile: Dockerfile
+    ports:
+      - 5010:80
+    environment:
+      - "DATABASE_URL=postgres://postgres:mypassword@db:5432/postgres?pool_max_conns=10"
+      - "HOST=http://todo:8080"
   db:
     image: postgres
     environment:
@@ -7,28 +17,18 @@ services:
     ports:
       - 5432:5432
 
-  flyway-migrations:
-    image: ${REGISTRY:-local}/flyway-migrations:${TAG:-latest}
-    build:
-      context: ./migrations
-      dockerfile: Dockerfile
-    depends_on:
-      - db
-    environment:
-      - "FLYWAY_URL=jdbc:postgresql://db/"
-      - "FLYWAY_SCHEMAS=todo"
-      - "FLYWAY_DEFAULT_SCHEMA=todo"
-      - "FLYWAY_USER=postgres"
-      - "FLYWAY_PASSWORD=mypassword"
-      - "FLYWAY_CONNECT_RETRIES=60"
-
-  todo-giraffe:
-    image: ${REGISTRY:-local}/todo.giraffe:${TAG:-latest}
-    build:
-      context: ./src/todo-giraffe
-      dockerfile: Dockerfile
-    ports:
-      - 8081:5000
-    environment:
-      - "DATABASE_URL=postgres://postgres:mypassword@db:5432/postgres?pool_max_conns=10"
-      - "HOST=http://todo:8080"
+  # flyway-migrations:
+  #   image: ${REGISTRY:-local}/flyway-migrations:${TAG:-latest}
+  #   build:
+  #     context: ./migrations
+  #     dockerfile: Dockerfile
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - "FLYWAY_URL=jdbc:postgresql://db/"
+  #     - "FLYWAY_SCHEMAS=todo"
+  #     - "FLYWAY_DEFAULT_SCHEMA=todo"
+  #     - "FLYWAY_USER=postgres"
+  #     - "FLYWAY_PASSWORD=mypassword"
+  #     - "FLYWAY_CONNECT_RETRIES=60"
+  
